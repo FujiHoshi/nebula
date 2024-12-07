@@ -24,7 +24,7 @@ jobs:
       # ファイル構造を確認
       - name: List files
         run: |
-          ls -R
+          ls -R /home/runner/work/nebula/nebula
 
       # 依存関係をインストール
       - name: Install dependencies
@@ -33,6 +33,6 @@ jobs:
 
       # app.js を実行
       - name: Run app.js
+        working-directory: /home/runner/work/nebula/nebula
         run: |
           node app.js
-        working-directory: .
