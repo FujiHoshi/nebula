@@ -1,10 +1,6 @@
 name: NEBULA
 
-on:
-  pull_request:
-    types: [push]
-    branches:
-      - main
+on: [push]
 
 jobs:
   nebula:
