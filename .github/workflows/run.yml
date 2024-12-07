@@ -1,12 +1,7 @@
-name: 'nebula'  # Actionの名前
-description: 'run nebula web proxy server'  # Actionの説明
-
+name: nebula
 on: [push]
-
-runs:
-  using: 'node20'  # どのNode.jsを使用するか指定
-  main: 'app.js'  # Actionのメインファイル。このファイルは後で自動生成させるのでこのままで大丈夫です。
-
-branding:  # Marketplaceでの表示を指定
-  icon: 'check-square'
-  color: 'green'
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm start
