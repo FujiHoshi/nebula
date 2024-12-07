@@ -2,7 +2,7 @@ name: NEBULA
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
+    types: [push]
     branches:
       - main
 
