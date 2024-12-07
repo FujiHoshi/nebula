@@ -4,4 +4,4 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - run: npm start
+      - run: node app.js
