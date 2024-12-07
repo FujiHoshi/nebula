@@ -1,371 +1,129 @@
-<div align="center">
-         
-<img src="https://socialify.git.ci/nebulaservices/nebula/image?description=1&font=Inter&forks=1&issues=1&language=1&name=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Dark" alt="ruby" width="640" height="320" />
 
-<img alt="repo size" src="https://img.shields.io/github/repo-size/nebulaservices/nebula?style=for-the-badge"></img>
-<img alt="website status" src="https://img.shields.io/website?url=https%3A%2F%2Fnebulaproxy.io&style=for-the-badge"></img>
-<img alt="commit a week" src="https://img.shields.io/github/commit-activity/w/nebulaservices/nebula?style=for-the-badge"></img>
-
+<div align=center> 
+<img src='https://nebulaproxy.nebula.bio/images/logo.png' width="100px" height="100px">
+<h1>  Nebula </h1>
+Nebula Web is an official flagship of Nebula Services. Nebula Web is a stunning and sleak webproxy with support for hundreds of popular sites, and partial support for WebRTC, used in GfN. With Nebula Web, the sky is the limit. Enjoy. 
 </div>
 
-<div align="center">
-    <h2>Get Started</h2>
-    <a>To get started, press one of the buttons below to deploy Nebula</a>
-    <br />
-    <br />
-    <a href="#terminal">
-        <img src="https://img.shields.io/badge/terminal-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Terminal">
-        </img>
-    </a>
-    <a href="#docker">
-        <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
-        </img>
-    </a>
-</div>
-
-## NOTE:
-
--   This will **NOT** deploy on GitHub Pages, Netlify, Vercel, Gitlab Pages, or any other _static_ host
--   This will **NOT** work on Render
----
-
-## How to get links
-
-[![Nebula Services Discord](https://invidget.switchblade.xyz/unblocker?theme=darl)](https://discord.gg/unblocker)
-[![Titanium Network Discord](https://invidget.switchblade.xyz/unblock?theme=dark)](https://discord.gg/unblock)
-
----
 
 ## Features
 
--   Multiple Proxy "Backends":
-    -   [Ultraviolet](https://github.com/titaniumnetwork-dev/ultraviolet)
-    -   [RammerHead](https://github.com/binary-person/rammerhead)
----
+- Stunning UI with multiple themes 
+- XOR/b64 Encrypts all traffic sent from Nebula
+- Hides your IP from sites
+- [List of officially supported sites](https://github.com/NebulaServices/Nebula/blob/main/docs/officially-supported-sites.md)
+- *limited* mobile support
+- StealthMode (buffed `about:blank` cloaking)
 
-## Contributors
 
-- [Rifting](https://github.com/rifting) - Owner & Maintainer
-- [MotorTruck1221](https://motortruck1221.com) - Maintainer
----
+
+### Self Hosting
+```bash
+$ git clone https://github.com/NebulaServices/Nebula.git
+$ cd Nebula
+$ npm ci
+$ npm start
+```
 
 ## Tech Stack
 
--   [Astro](https://astro.build)
--   [Fastify](https://fastify.dev)
--   [Ultraviolet](https://github.com/titaniumnetwork-dev/ultraviolet)
--   [RammerHead](https://github.com/binary-person/rammerhead)
--   [Epoxy](https://github.com/mercuryworkshop/epoxy-tls)
--   [Libcurl.js](https://github.com/ading2210/libcurl.js)
--   HTML, CSS, and JavaScript (DUH)
----
+- HTML, JS, CSS
+- Partical.JS 
+- UV Backend Proxy 
+- Osana Backend Proxy
+- Cyclone Backend Proxy
+- **Server:** Bare server on Node  
 
-## Catalog/Marketplace
 
-- By default, the marketplace is enabled and uses SQLite
-- If you would like to disable the catalog, see [#config](#config)
-- For big production instances, I recommend using PostgreSQL rather than SQLite. To do this see [#config](#config)
-- To use PostgreSQL via the provided docker-compose files, see [#docker](#docker)
+## Support
 
-### How to make a theme
+For support, email chloe@nebula.bio or join our discord: discord.nebula.bio
 
-- Themes allow you to customize Nebula's *look*.
 
-#### Prerequisites:
-  - Make sure you have our [Discord server](https://discord.gg/unblocker) so you can submit your theme
+## Demo
 
-##### Making the themes:
+[Click here to see a demo of Nebula](https://tutorialread.beauty/)
 
-1. Firstly, copy the CSS vars:
-```css
-:root {
-    --background-primary: /*Your stuff here */;
-    --background-lighter: ;
-    --navbar-color: ;
-    --navbar-text-color: ;
-    --navbar-link-color: ; 
-    --navbar-link-hover-color: ; 
-    --input-text-color: ;
-    --input-placeholder-color: ; 
-    --input-background-color: ;
-    --input-border-color: ;
-    --tab-color: ;
-    --border-color: ; 
-}
-```
+# Deployment
 
-> [!NOTE]
->
-> You can add a custom font as well! To do so, add this to your `:root`
-> 
-> ```css
-> --font-family: /* Font family name */;
-> ```
-> 
-> And this to the bottom of your CSS file/submission:
-> ```css
-> @font-face {
->    font-family: /* Name */;
->    src: url(/* Where the font is located! Local or external work! */);
->   }
->  ```
->
-> A good example of using a custom font is the built-in `retro` theme [here](./database_assets/com.nebula.retro)
-
-2. Add your colors and test! (Either with a self-hosted version of Nebula OR via a live preview (no clue when this will happen)
-
-3. Once you're satisfied with the colors, submit your theme to the [Discord Server](https://discord.gg/unblocker)!
+## Quick Deployment Options
+[![Deploy to Heroku](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/heroku.svg)](https://heroku.com/deploy/?template=https://github.com/NebulaServices/Nebula)
+<br>
+[![Run on Replit](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/replit.svg)](https://replit.com/github/NebulaServices/Nebula)
+<br>
+[![Remix on Glitch](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/glitch.svg)](https://glitch.com/edit/#!/import/github/NebulaServices/Nebula)
+<br>
+[![Deploy to IBM Cloud](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/ibmcloud.svg)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/NebulaServices/Nebula)
+<br>
+[![Deploy to Amplify Console](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/amplifyconsole.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/NebulaServices/Nebula)
+<br>
+[![Run on Google Cloud](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/googlecloud.svg)](https://deploy.cloud.run/?git_repo=https://github.com/NebulaServices/Nebula)
+<br>
+[![Deploy on Railway](https://binbashbanana.github.io/deploy-buttons/buttons/remade/railway.svg)](https://railway.app/new/template/pBzeiN)
+<br>
+[![Deploy To Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/NebulaServices/Nebula&branch=main&name=NebulaProxy)
 
 ---
-### How to make a plugin
+## Advanced Deployment 
 
-- Plugins extend the functionality of either the proxied page(s) or the service worker.
-- This guide provides an incredibly basic example of how to make either.
+### Initial configuration
 
-#### Prerequisites:
-  - Make sure you have joined our [Discord server](https://discord.gg/unblocker) so you can submit your plugin.
-  - Some knowledge of JS/TS
+credits to @ProgrammerIn-wonderland for writing this wonderful tutorial (which can also be found in the docs :)
 
-##### Serviceworker plugin:
-
-- These plugins are handled by Workerware see [here](https://github.com/mercuryworkshop/workerware) for docs.
-
-1. Create an index.js (or other file name) file:
-```bash
-touch index.js
-```
-
-2. Edit that file to include either of these:
-    - Code encased in a string:
-    ```js
-    function setup() {
-        // This function MUST return the following attributes:
-        return {
-            function: `console.log('Example code.')`,
-            name: 'com.example', // Technically, it could be named anything. It is recommended to use the same name for everything (name when submitting and this)        
-            events: ['fetch'] // See: https://github.com/mercuryworkshop/workerware for the event types you can use. (Also typed if you are using typescript)
-        }
-    }
-    
-    //This can be named anything. However, it's recommended to use `entryFunc` (with types, the naming IS enforced)
-    self.entryFunc = setup; //DO NOT call the function here. Only assign the reference otherwise, it will error.
-    ```
-    - Code in an arrow function:    
-    ```js
-    const example = () => {
-        console.log('Example code')
-    }
-
-    function setup() {
-        //This function MUST return the following attributes:
-        return {
-            function: example, //Do not call the function, only assign the reference to the function.
-            name: 'com.example', // Technicall could be name anything. Recommended to use the same name for everything (name when submitting and this)
-            event: ['fetch'] // Se https://github.com/mercuryworkshop/workerware for the event types you can use. (Also typed if using typescript)
-        }
-    }
-
-    //This can be named anything. However, it's recommended to use `entryFunc` (with types, the naming IS enforced)
-    self.entryFunc = setup; //DO NOT call the function here. Only assign the reference; otherwise, it will result in an error.
-    ```
-
-> [!WARNING]
-> The only *allowed* way to pass code to the `function` param is either a string or an arrow function. Named functions ***WILL NOT WORK***.
->
-> Example of a named function: `function example() {/* Some form of code */}`.
->
-> If a named function is used where it shouldn't be, your plugin will not be approved, nor will it work properly.
-
-3. Submit your plugin in the [Discord](https://discord.gg/unblocker)!
-
-##### Proxied page plugins
-
-- They allow modification of websites that UV proxies, (EX: you could add Vencord to Discord with this)
-
-1. Create an index.js file (or another file name)
-```bash
-touch index.js
-```
-
-2. Edit that file with your code and the following:
-```js
-//Name this whatever.
-function example() {
-    //You MUST return the following
-    return {
-        host: "example.com", //The host to match (so if the user visits example.com it will inject the html below.
-        html: "<script>console.log('Example')</script>", //Must return a string (and be valid HTML or your plugin will break). How you get that string is up to you
-        injectTo: "head" // Can be "head" or "body"
-    }
-}
-
-// Technically, this could be named anything, it is recommended to call it `entryFunc`
-self.entryFunc = example; //DO NOT run the function here. That will cause errors. Only assign the reference to the function here.
-```
-
-3. Submit it in our [Discord](https://discord.gg/unblocker)!
+* Create an account at https://www.cloudflare.com/
+* Create an account at https://www.freenom.com/ (or any registrars) 
+* Find a free domain name at Freenom
+* Click checkout 
+	* Select (12 Months @ FREE) 
+	* Select "Use DNS"
+		* Select Use your own DNS 
+* Go to cloudflare, click add new site, and enter the free domain name
+* Select "Free Plan"
+* Click continue, ignore DNS
+	* Copy the name servers cloudflare gives you
+* Go back to your Freenom tab, enter in the name servers which cloudflare gave you
+	* You can keep IP blank
+* Click continue
+* Click complete order
+* Go back to cloudflare tab, click "Check Nameservers"
+* Select DNS on your right bar
+* Enter in the IP of the server which will be hosting Nebula
+    * Target will be `@`
+* Click Enable proxy (little gray cloud icon, if active its orange)
+* Select SSL/TLS in your right bar
+* Click "Flexible"
 
 ---
 
-## Deployment
+### Server configuration
 
-### Terminal
-
-Prerequisites:
-- Node & npm
-- Git
-
-1. Clone the repo:
-```bash
-git clone https://github.com/nebulaservices/nebula --recursive && cd nebula
+* SSH into the server you'll be using, I'll assume its running Ubuntu 22.04 (though the commands are the same for debian 10+ versions, and Ubuntu versions 20.04+)
+* run 
 ```
-
-2. Install all of the dependencies:
-```bash
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - \ &&
+sudo apt-get install -y nodejs npm
+git clone https://github.com/NebulaServices/Nebula.git
+cd Nebula
 npm i
+npm ci
+sudo nohup PORT=80 node . &
 ```
 
-3. Create a `config.toml` file
-```bash
-cp config.example.toml config.toml
-```
+**Make sure your firewall is configured to let through port 80 traffic!** \
+*Note: Server will need to run` cd Nebula && sudo nohup PORT=80 node . &` on reboot*
+(Nebula's license is now GNU AGPL V3 as of v7.10)
 
-4. Modify the `config.toml` file to your liking (docs [here](#environment))
-```
-nano config.toml
-```
+## Acknowledgements
 
-5. Build the front end & server:
-```bash
-npm run build
-```
+ - [UV (one of the back-end proxy we use)](https://github.com/titaniumnetwork-dev/Ultraviolet)
+ - [Cyclone (one of the back-end proxy we use)](https://github.com/NebulaServices/Cyclone)
+ - [Osana (one of the back-end proxy we use)](https://github.com/NebulaServices/Osana)
+ - [Bare Server](https://github.com/tomphttp/bare-server-node)
+ - [Partical.JS (v4, 5, 6.1 &< only)](https://github.com/VincentGarreau/particles.js)
 
-6. Start the server
-```bash
-npm start
-```
+## License
 
-> [!NOTE]
-> You can run `npm run bstart` to build and start together
----
+Copyright Nebula Services 2021 - Present
+<br>
+This project uses the MIT license. 
 
-### Docker
-
-- There are two ways to deploy with docker:
-    - [Normal docker](#normal-docker)
-    - [Docker Compose](#docker-compose)
-
-#### Normal Docker
-
-Prerequisites:
-- Git
-- Docker
-
-1. Clone the repo (skip if using a prebuilt image):
-```bash
-git clone https://github.com/nebulaservices/nebula --recursive && cd nebula
-```
-
-2. Create an `config.toml` file (if using prebuilt image, copy the example from the repo):
-```bash
-cp config.example.toml config.toml
-```
-
-3. Modify the `config.toml` file to your liking (docs [here](#environment))
-```bash
-nano config.toml
-```
-
-4. Build the docker image (skip if using prebuilt):
-```bash
-docker build nebula:latest
-```
-5. Run the docker images:
-
-    - Prebuilt:
-    ```bash
-    docker run -v ./config.toml:/app/config.toml ghcr.io/nebulaservices/nebula:latest
-    ```
-    - Image you built yourself:
-    ```bash
-    docker run -v ./config.toml:/app/config.toml nebula:latest
-    ```
-
-#### Docker Compose
-
-Prerequisites:
-- Git
-- Docker w/compose
-
-1. Clone the repo (skip if using a prebuilt image):
-```bash
-git clone https://github.com/nebulaservices/nebula --recursive
-```
-
-2. Create an `config.toml` file (if using prebuilt image, copy the example from the repo):
-```bash
-cp config.example.toml config.toml
-```
-
-3. Modify the `config.toml` file to your liking (docs on that [here](#environment)]
-```bash
-nano config.toml
-```
-
-4. Build the docker image (skip if using prebuilt):
-```bash
-docker compose -f ./docker-compose.build.yml build
-```
-
-5. Run the docker image:
-
-    - Prebuilt:
-    ```bash
-    docker compose up
-    ```
-    - Image you built yourself:
-    ```bash
-    docker compose -f ./docker-compose.build.yml up
-    ```
-#### Extra (Postgres)
-
-- To use Postgres over SQLite, uncomment the DB section in the `docker-compose` file (or use your own Postgres DB!). Then, modify the `config.toml` (See: [#config](#config) for knowledge on how to do this)
-- To use Postgres over SQLite in a normal docker environment (no compose), you'll have to set one up and then modify the `config.toml` to use it. (See: [#config](#config) for knowledge on how to do this)
-
----
-
-## Config
-
-There are a couple of configuration options for Nebula. The defaults are fine most of the time, but there are instances where you may not want certain options enabled or certain things running.
-- An example config file is located [here](./config.example.toml). 
-- Config format is in TOML
-
-| Variable | Description | Type | Default |
-|:----------:|:-------------:|:------:|:---------:|
-| `marketplace` | The options below are for the marketplace section | `object` | N/A |
-| `enabled` | Enable marketplace functionality | `boolean` | `true` |
-| `psk` | The password and authentication key for the marketplace. ***CHANGE FROM DEFAULT*** | `string` | `CHANGEME` |
-|----------------------------| ----------------------------------------------------------------------------|------------|--------------|
-| `db` | The below options are for the db (database) section | `object` | N/A |
-| `name` | The database name to use | `string` | `database` |
-| `username` | The username for the DB | `string` | `username` |
-| `password` | The database password. ***CHANGE FROM DEFAULT VALUE*** | `string` | `password` |
-| `postgres` | Whether to use postgres over sqlite *(recommended for large production instances)* | `boolean` | `false` |
-|----------------------------| ----------------------------------------------------------------------------|------------|--------------|
-| `postgres` | The below options are for the postgres section. (Only worry about this if you enabled postgres in the db section.) | `object` | N/A |
-| `domain` | Either the TLD or the IP address of your postgres server. | `string` | `''` |
-| `port` | The port your postgres server is listening on | `number` | `5432` |
-|----------------------------| ----------------------------------------------------------------------------|------------|--------------|
-| `server.server` | The below options are to configure the server. | `object` | N/A |
-| `port` | What port the server should listen on. *(Note: Can also be configured via environment variable `PORT`)* | `number` | `8080` |
-| `wisp` | Whether the server should use the inbuilt wisp server. (Disabled if your using an external wisp server) | `boolean` | `true` |
-| `logging` | Whether or not to enable logging. *Note: Logs are massive* | `boolean` | `true` |
-|----------------------------| ----------------------------------------------------------------------------|------------|--------------|
-
-## Deploying
-### Koyeb
-- First setup the config.toml file with the docker-compose instructions!
-- Fork this repo
-- Create new koyeb service, and select webservice
-- Select import from github and import your forked repo
-- Change package to dockerfile and press deploy!
