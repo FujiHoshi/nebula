@@ -1,7 +1,24 @@
-name: nebula
-on: [push]
+name: NEBULA
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - main
+
 jobs:
-  check-bats-version:
+  nebula:
+    name: nebula
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./
     steps:
-      - run: node ../../../../../app.js
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+
+      - run: node nebula:app.js
