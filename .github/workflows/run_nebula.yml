@@ -1,4 +1,4 @@
-name: run nebula
+name: Run app.js
 
 on:
   push:
@@ -19,8 +19,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20' # 必要な Node.js のバージョンを指定
-        
+          node-version: '18' # 必要な Node.js のバージョンを指定
+
+      # 依存関係をインストール
+      - name: Install dependencies
+        run: |
+          npm install
+
       # app.js を実行
       - name: Run app.js
         run: |
