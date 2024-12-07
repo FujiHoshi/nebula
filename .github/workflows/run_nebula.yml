@@ -19,7 +19,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # 必要な Node.js のバージョンを指定
+          node-version: '20' # 必要な Node.js のバージョンを指定
+
+      # ファイル構造を確認
+      - name: List files
+        run: |
+          ls -R
 
       # 依存関係をインストール
       - name: Install dependencies
@@ -30,3 +35,4 @@ jobs:
       - name: Run app.js
         run: |
           node app.js
+        working-directory: .
