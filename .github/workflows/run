@@ -1,0 +1,10 @@
+name: 'nebula'  # Actionの名前
+description: 'run nebula web proxy server'  # Actionの説明
+
+runs:
+  using: 'node20'  # どのNode.jsを使用するか指定
+  main: 'app.js'  # Actionのメインファイル。このファイルは後で自動生成させるのでこのままで大丈夫です。
+
+branding:  # Marketplaceでの表示を指定
+  icon: 'check-square'
+  color: 'green'
